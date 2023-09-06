@@ -11,6 +11,7 @@ import { FlightModule } from './flight/flight.module';
       isGlobal: true,
       envFilePath: '.env',
     }),
+
     UserModule,
     PassengerModule,
     FlightModule,

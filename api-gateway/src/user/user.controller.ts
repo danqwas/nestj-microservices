@@ -27,7 +27,7 @@ export class UserController {
 
   @Post()
   createUser(@Body() createUserDto: CreateUserDto): Observable<IUser> {
-    return this.clientProxyUser.send(UserMSG.CREATE_USER, { createUserDto });
+    return this.clientProxyUser.send(UserMSG.CREATE_USER, createUserDto);
   }
   @Get()
   findAllUsers(): Observable<IUser[]> {
@@ -36,7 +36,7 @@ export class UserController {
 
   @Get(':term')
   findUserByTerm(@Param('term') term: string): Observable<IUser> {
-    return this.clientProxyUser.send(UserMSG.FIND_USER_BY_ID, { term });
+    return this.clientProxyUser.send(UserMSG.FIND_USER_BY_ID, term);
   }
 
   @Patch(':id')
@@ -51,6 +51,6 @@ export class UserController {
   }
   @Delete(':id')
   deleteUser(@Param('id') id: string): Observable<IUser> {
-    return this.clientProxyUser.send(UserMSG.DELETE_USER, { id });
+    return this.clientProxyUser.send(UserMSG.DELETE_USER, id);
   }
 }

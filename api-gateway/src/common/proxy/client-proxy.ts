@@ -15,7 +15,7 @@ export class ClientProxySuperflights {
     return ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
-        urls: [this.configService.get('AMQP_URL')],
+        urls: [this.configService.get('AQMP_URL')],
         queue: RabbitMQQueue.USERS,
       },
     });
@@ -24,7 +24,7 @@ export class ClientProxySuperflights {
     return ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
-        urls: [this.configService.get('AMQP_URL')],
+        urls: [this.configService.get('AQMP_URL')],
         queue: RabbitMQQueue.PASSENGER,
       },
     });
@@ -33,7 +33,7 @@ export class ClientProxySuperflights {
     return ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
-        urls: [this.configService.get('AMQP_URL')],
+        urls: [this.configService.get('AQMP_URL')],
         queue: RabbitMQQueue.FLIGHT,
       },
     });
